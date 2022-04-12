@@ -37,8 +37,6 @@
 
 <body>
 <?= View::make('client.header') ?>
-
-
 @yield('main')
 <?= View::make('client.footer') ?>
 
