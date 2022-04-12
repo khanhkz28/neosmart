@@ -26,7 +26,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
   <!-- CSS -->
   <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
-  <link href="{{ asset('css/css.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/clientcss.css') }}" rel="stylesheet" />
    <!--Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
