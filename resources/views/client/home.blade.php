@@ -4,6 +4,6 @@
 @section('breadcrumb-second', 'Trang chủ')
 @section('main')
 <main>
-    MAIN
+    <p>aaaaaaas</p>
   </main>
 @endsection

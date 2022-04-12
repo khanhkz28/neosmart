@@ -41,11 +41,23 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+:root {
+	--prinary: #33B3A6;
+	--white: #ffffff; 
+	--pink: #FF6666;
+	--text-gray:#798CA4;
+	--blue:##5A98D0;
+	--black:#3E3E3E;
+	--text-font:16px;
+  }
+ 
 body{
     font-family: 'Mulish', sans-serif;
 }
-
+p{
+	font-size: var(--text-font);
+	color:var(--text-gray);
+}
 /* HEADER */
 
 /* Main */
