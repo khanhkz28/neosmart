@@ -58,6 +58,14 @@ p{
 	font-size: var(--text-font);
 	color:var(--text-gray);
 }
+.btnprinary{
+	background: var(--prinary);
+	color:var(--white);
+	font-size: var(--text-font);
+}
+.btnprinary::hover {
+	background: var(--prinary);
+}
 /* HEADER */
 
 /* Main */
