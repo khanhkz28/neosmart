@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use Tymon\JWTAuth\Facades\JWTAuth;
 class AuthController extends Controller
 {
     /**
@@ -70,10 +72,24 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function logout() {
-        auth()->logout();
+    public function logout(Request $request) {
+        $this->validate($request, [
+            'token' => 'required'
+        ]);
 
-        return response()->json(['message' => 'User successfully signed out']);
+        try {
+            JWTAuth::invalidate($request->token);
+
+            return response()->json([
+                'status' => true,
+                'message' => 'User logged out successfully'
+            ]);
+        } catch (JWTException $exception) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Sorry, the user cannot be logged out'
+            ], 500);
+        }
     }
 
     /**
