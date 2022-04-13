@@ -43,6 +43,33 @@ class BlogController extends Controller
                 return response()->json($blog);
 
     }
+    public function update(Request $request, $id)
+    {
+        $this->validate($request,[
+            'title' => 'required',
+            'photo' => 'required',
+        ]);
+        $blog = Blog::find($id);
+         //image upload
+         if($request->hasFile('photo')){
+            $file = $request->file('photo');
+            $allowedfileExtention = ['pdf','png','jpg'];
+            $extention = $file->getClientOriginalExtension();
+            $check = in_array($extention,$allowedfileExtention);
+            if($check){
+                $name = time() . $file->getClientOriginalName();
+                $file->move('images', $name);
+                $blog->photo= $name;
+            }
+        }    
+        $blog->title = $request->input('title');           
+        $blog->description = $request->input('description');   
+        $blog->title = $request->input('content');    
+        $blog->position = $request->input('position');        
+        $blog->display = $request->input('display'); 
+        $blog->save();
+        return response()->json($blog); 
+    }
     public function show($id)
     {
         $blog= Blog::find($id);

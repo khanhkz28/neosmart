@@ -97,7 +97,9 @@ class ProductController extends Controller
         }    
         $product->title = $request->input('title');        
         $product->price = $request->input('price');        
-        $product->description = $request->input('description');   
+        $product->description = $request->input('description');      
+        $product->position = $request->input('position');        
+        $product->display = $request->input('display'); 
         $product->save();
         return response()->json($product); 
     }
