@@ -43,8 +43,8 @@
 @yield('main')
 <?= View::make('client.footer') ?>
 
-  <script src=" asset('css/bootstrap.bundle.min.js') "></script>
-
+  <script src=" asset('js/bootstrap.bundle.min.js') "></script>
+  <script src=" asset('js/scripts.js') "></script>
 
 
 </body>
