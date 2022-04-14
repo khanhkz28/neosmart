@@ -22,6 +22,11 @@ class CreateBlogTable extends Migration
             $table->text('photo');
             $table->tinyInteger('display')->default(1);
             $table->tinyInteger('position')->default(0);
+            $table->unsignedBigInteger('listblog_id');
+            $table->foreign('listblog_id')
+                ->references('id')
+                ->on('listblog')
+                ->onDelete('cascade');
         });
     }
 
