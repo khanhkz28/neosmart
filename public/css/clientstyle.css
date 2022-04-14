@@ -145,6 +145,28 @@ p{
 		font-weight: 500;
 		font-size: 14px;
 	} 
+	.featurette .featurette-heading{
+		margin-bottom: 20px;
+	}
+	.featurette .featurette-heading a{
+		font-style: normal;
+		font-weight: 1000;
+		font-size: 30px;
+		line-height: 26px;
+		letter-spacing: 0.05em;
+		color: #818181;
+		border-bottom: var(--prinary) 5px solid;
+	}
+	.featurette .featurette-news h3{
+		font-weight: 1000;
+font-size: 16px;
+line-height: 26px;}
+	.featurette-news{
+		padding: 15px 0;
+	}
+	.featurette-img img{
+		width: 100%;
+	}
 /* FOOTER */
 
 .footer {

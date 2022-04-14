@@ -8,7 +8,7 @@
   <div class="position-relative overflow-hidden home-slider">
     <div class="container">
       <div class="row">
-          <div class="col-5  my-5">
+          <div class="col-md-5  col-sm-12  my-5">
           <h1 class="display-4 my-3">Nhà thông minh</h1>
           <div>
             <img src="{{asset('images/client/logo.png')}}" alt="">
@@ -16,7 +16,7 @@
           <p class="fw-normal  my-3">Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner</p>
           <a class="btn btnprinary btn-outline-secondary my-3" href="#">Tìm hiểu thêm</a>
         </div>
-        <div class="col-7">
+        <div class="col-md-7  col-sm-12">
             <div class="home-slider-img">
                 <img src="{{asset('images/client/hero.png')}}" alt="">
             </div>
@@ -111,6 +111,54 @@
           </div>
     </div>
         </div>
+  </section>
+  <section class="container faq my-10">
+  <div class="row featurette">
+     
+      <div class="col-md-5 col-sm-12 featurette-img">
+        <div class="featurette-heading"><a>FAQs</a></div>
+        <img src="{{asset('images/client/Hfaq.png')}}" alt="">
+
+      </div>
+      <div class="col-md-7 col-sm-12">
+       
+        <div class="featurette-news">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        <div class="featurette-news">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        <div class="featurette-news">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container my-10">
+  <div class="row featurette">
+      <div class="col-md-7 col-sm-12">
+        <div class="featurette-heading"><a>Tin tức</a></div>
+        <div class="featurette-news">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        <div class="featurette-news">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        <div class="featurette-news">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+      </div>
+      <div class="col-md-5 featurette-img col-sm-12">
+        <img src="{{asset('images/client/Hnews.png')}}" alt="">
+
+      </div>
+    </div>
   </section>
   </main>
 @endsection
