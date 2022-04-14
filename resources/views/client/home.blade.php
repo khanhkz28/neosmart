@@ -112,7 +112,7 @@
     </div>
         </div>
   </section>
-  <section class="container faq my-10">
+  <section class="container faq mb150 my-10">
   <div class="row featurette">
      
       <div class="col-md-5 col-sm-12 featurette-img">
@@ -137,7 +137,7 @@
       </div>
     </div>
   </section>
-  <section class="container my-10">
+  <section class="container mb150 my-10">
   <div class="row featurette">
       <div class="col-md-7 col-sm-12">
         <div class="featurette-heading"><a>Tin tức</a></div>

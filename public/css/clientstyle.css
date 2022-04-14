@@ -74,6 +74,9 @@ p{
 .btnprinary:hover{
 	background:var(--hoverbtn);
 }
+.mb150{
+	margin-bottom: 150px;
+}
 /* HEADER */
 
 /* Main */

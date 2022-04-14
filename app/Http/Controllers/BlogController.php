@@ -11,6 +11,20 @@ class BlogController extends Controller
         $blog= Blog::all();
         return response()->json($blog); 
     }
+    public function GetAll()
+    {
+        return view('client.construction.index', ['Blogs' => Blog::GetAll()]);
+    }
+    public function GetById($id)
+    {
+        $row= Blog::find($id);
+        if ($row == null) {
+            return redirect('congtrinh')->with('success', 'Công trình này không tồn tại!');
+        } else {
+            return view('client.construction.detail', compact('row'));
+        }
+    }
+    
     public function store(Request $request)
     {
         $this->validate($request,[

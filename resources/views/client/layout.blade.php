@@ -28,6 +28,9 @@
   <!-- CSS -->
   <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
   <link href="{{ asset('css/clientstyle.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/nhi.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/tuan.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/phong.css') }}" rel="stylesheet" />
    <!--Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

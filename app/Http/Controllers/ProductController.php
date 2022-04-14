@@ -15,7 +15,16 @@ class ProductController extends Controller
     }
     public function GetAll()
     {
-        return view('admin.product.index', ['products' => Product::GetAll()]);
+        return view('client.products.index', ['products' => Product::GetAll()]);
+    }
+    public function GetById($id)
+    {
+        $row= Product::find($id);
+        if ($row == null) {
+            return redirect('sanpham')->with('success', 'Sản phẩm này không tồn tại!');
+        } else {
+            return view('client.products.detail', compact('row'));
+        }
     }
     public function store(Request $request)
     {

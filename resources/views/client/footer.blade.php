@@ -10,10 +10,10 @@
         <div class="col-3 footer-center">
             <h4 class="mb-5">Trang chủ</h4>
             <ul>
-                <li><a href="">Công trình</a></li>
-                <li><a href="">Sản phẩm</a></li>
-                <li><a href="">Hỏi đáp</a></li>
-                <li><a href="">Liên hệ</a></li>
+                <li><a href="/congtrinh">Công trình</a></li>
+                <li><a href="/sanpham">Sản phẩm</a></li>
+                <li><a href="hoi-dap">Hỏi đáp</a></li>
+                <li><a href="lien-he">Liên hệ</a></li>
             </ul>
         </div>
         <div class="col-3">

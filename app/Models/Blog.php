@@ -17,4 +17,7 @@ class Blog extends Model
         'position',
         'display' 
     ];
+    function scopeGetAll(){
+        return $this->orderBy('id','asc')->paginate(10);
+    }
 }
