@@ -27,6 +27,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
   <!-- CSS -->
   <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link href="{{ asset('css/clientstyle.css') }}" rel="stylesheet" />
   <link href="{{ asset('css/nhi.css') }}" rel="stylesheet" />
   <link href="{{ asset('css/tuan.css') }}" rel="stylesheet" />
@@ -43,8 +44,8 @@
 @yield('main')
 <?= View::make('client.footer') ?>
 
-  <script src=" asset('js/bootstrap.bundle.min.js') "></script>
-  <script src=" asset('js/scripts.js') "></script>
+  <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('js/scripts.js')}}"></script>
 
 
 </body>

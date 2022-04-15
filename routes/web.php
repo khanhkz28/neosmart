@@ -21,7 +21,7 @@ Route::get('/lien-he', function () {
     return view('client.contant');
 });
 Route::get('/hoi-dap', function () {
-    return view('client.contant');
+    return view('client.faqs');
 });
 Route::group(['prefix' => 'congtrinh'], function ($router) {
     Route::get('/', [BlogController::class, 'GetAll']);
