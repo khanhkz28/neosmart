@@ -19,7 +19,11 @@ class AuthController extends Controller
     public function __construct() {
         $this->middleware('auth:api', ['except' => ['login', 'register']]);
     }
-
+    public function GetAll()
+    {
+        $users= User::all();
+        return response()->json($users); 
+    }
     /**
      * Get a JWT via given credentials.
      *
@@ -63,7 +67,7 @@ class AuthController extends Controller
             'message' => 'User successfully registered',
             'user' => $user 
         ], 201);
-
+        
     }
 
 
@@ -146,4 +150,5 @@ class AuthController extends Controller
             'user' => $user,
         ], 201);
     }
+
 }

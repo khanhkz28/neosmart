@@ -26,6 +26,7 @@ Route::group([
     'prefix' => 'auth'
 
 ], function ($router) {
+    Route::post('/getalluser', [AuthController::class, 'GetAll']);
     Route::post('/login', [AuthController::class, 'login']);
     Route::post('/register', [AuthController::class, 'register']);
     Route::post('/logout', [AuthController::class, 'logout']);
@@ -40,6 +41,7 @@ Route::group(['middleware' => 'api','prefix' => 'blog'], function ($router) {
     Route::post('update/{id}', [BlogController::class, 'update']);
     Route::delete('delete/{id}', [BlogController::class, 'destroy']);
     Route::get('show/{id}', [BlogController::class, 'show']);
+    Route::post('updateDisplay/{id}', [BlogController::class, 'updateDisplay']);
 });
 Route::group(['middleware' => 'api','prefix' => 'category'], function ($router) {
     Route::get('index', [CategoryController::class, 'index']);
