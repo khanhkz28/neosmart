@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ListBlog;
 use Illuminate\Http\Request;
 
-class ListBlogController extends Controller
+class FaqControllerListBlogController extends Controller
 {
     public function index(){
         $ListBlog = ListBlog::all();

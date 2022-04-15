@@ -98,6 +98,12 @@ class BlogController extends Controller
         $blog->save();
         return response()->json($blog); 
     }
+    public function updateDisplay(Request $request, $id)
+    {
+        $blog = Blog::find($id);
+        $blog->display = $request->input('display'); 
+        $blog->save();
+    }
     public function show($id)
     {
         $blog= Blog::find($id);

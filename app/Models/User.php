@@ -22,7 +22,9 @@ class User extends Authenticatable implements JWTSubject
         'email',
         'password',
     ];
-
+    function scopeGetAll(){
+        return $this->orderBy('id','asc')->paginate(10);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
