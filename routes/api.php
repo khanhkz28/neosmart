@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ListBlogController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -48,6 +49,13 @@ Route::group(['middleware' => 'api','prefix' => 'category'], function ($router) 
     Route::get('show/{id}', [CategoryController::class, 'show']);
 });
 
+Route::group(['middleware' => 'api','prefix' => 'listblog'], function ($router) {
+    Route::get('index', [ListBlogController::class, 'index']);
+    Route::post('store', [ListBlogController::class, 'store']);
+    Route::post('update/{id}', [ListBlogController::class, 'update']);
+    Route::delete('delete/{id}', [ListBlogController::class, 'destroy']);
+    Route::get('show/{id}', [ListBlogController::class, 'show']);
+});
 Route::group(['middleware' => 'api','prefix' => 'product'], function ($router) {
     Route::get('index', [ProductController::class, 'index']);
     Route::post('store', [ProductController::class, 'store']);

@@ -15,7 +15,8 @@ class Blog extends Model
         'content',
         'photo',
         'position',
-        'display' 
+        'display' ,
+        'listblog_id' 
     ];
     function scopeGetAll(){
         return $this->orderBy('id','asc')->paginate(10);
