@@ -6,6 +6,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ListBlogController;
+use App\Http\Controllers\FaqController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,6 +27,7 @@ Route::group([
     'prefix' => 'auth'
 
 ], function ($router) {
+    Route::post('/getalluser', [AuthController::class, 'GetAll']);
     Route::post('/login', [AuthController::class, 'login']);
     Route::post('/register', [AuthController::class, 'register']);
     Route::post('/logout', [AuthController::class, 'logout']);
@@ -39,6 +42,7 @@ Route::group(['middleware' => 'api','prefix' => 'blog'], function ($router) {
     Route::post('update/{id}', [BlogController::class, 'update']);
     Route::delete('delete/{id}', [BlogController::class, 'destroy']);
     Route::get('show/{id}', [BlogController::class, 'show']);
+    Route::post('updateDisplay/{id}', [BlogController::class, 'updateDisplay']);
 });
 Route::group(['middleware' => 'api','prefix' => 'category'], function ($router) {
     Route::get('index', [CategoryController::class, 'index']);
@@ -48,6 +52,20 @@ Route::group(['middleware' => 'api','prefix' => 'category'], function ($router) 
     Route::get('show/{id}', [CategoryController::class, 'show']);
 });
 
+Route::group(['middleware' => 'api','prefix' => 'listblog'], function ($router) {
+    Route::get('index', [ListBlogController::class, 'index']);
+    Route::post('store', [ListBlogController::class, 'store']);
+    Route::post('update/{id}', [ListBlogController::class, 'update']);
+    Route::delete('delete/{id}', [ListBlogController::class, 'destroy']);
+    Route::get('show/{id}', [ListBlogController::class, 'show']);
+});
+Route::group(['middleware' => 'api','prefix' => 'faq'], function ($router) {
+    Route::get('index', [FaqController::class, 'index']);
+    Route::post('store', [FaqController::class, 'store']);
+    Route::post('update/{id}', [FaqController::class, 'update']);
+    Route::delete('delete/{id}', [FaqController::class, 'destroy']);
+    Route::get('show/{id}', [FaqController::class, 'show']);
+});
 Route::group(['middleware' => 'api','prefix' => 'product'], function ($router) {
     Route::get('index', [ProductController::class, 'index']);
     Route::post('store', [ProductController::class, 'store']);
