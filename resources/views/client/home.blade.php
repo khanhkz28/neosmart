@@ -112,53 +112,6 @@
     </div>
         </div>
   </section>
-  <section class="container faq mb150 my-10">
-  <div class="row featurette">
-     
-      <div class="col-md-5 col-sm-12 featurette-img">
-        <div class="featurette-heading"><a>FAQs</a></div>
-        <img src="{{asset('images/client/Hfaq.png')}}" alt="">
 
-      </div>
-      <div class="col-md-7 col-sm-12">
-       
-        <div class="featurette-news">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div>
-        <div class="featurette-news">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div>
-        <div class="featurette-news">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="container mb150 my-10">
-  <div class="row featurette">
-      <div class="col-md-7 col-sm-12">
-        <div class="featurette-heading"><a>Tin tức</a></div>
-        <div class="featurette-news">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div>
-        <div class="featurette-news">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div>
-        <div class="featurette-news">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing eli</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div>
-      </div>
-      <div class="col-md-5 featurette-img col-sm-12">
-        <img src="{{asset('images/client/Hnews.png')}}" alt="">
-
-      </div>
-    </div>
-  </section>
   </main>
 @endsection

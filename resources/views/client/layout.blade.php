@@ -42,8 +42,8 @@
 <body>
 <?= View::make('client.header') ?>
 @yield('main')
-<?= View::make('client.footer') ?>
 
+@include('client.footer')
   <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('js/scripts.js')}}"></script>
 

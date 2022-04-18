@@ -227,3 +227,9 @@ line-height: 26px;}
 .footer .footer-center {
 	margin-left: 8rem;
 }
+.d-pagination{
+    align-items: center;
+    display: flex;
+    margin: 30px 0;
+    justify-content: center;
+  }
