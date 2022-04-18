@@ -51,13 +51,21 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function register(Request $request) {
-
-        $this->validate($request,
-        [
+        $validator = Validator::make($request->all(), [
             'name'=> 'required',
-            'email'=> 'required|email',
+            'email'=> 'required|email|unique:users',
             'password'=> 'required|confirmed'
         ]);
+        // $this->validate($request,
+        // [
+        //     'name'=> 'required',
+        //     'email'=> 'required|email|unique:users',
+        //     'password'=> 'required|confirmed'
+        // ]);
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+
         $name=$request->input('name');
         $email=$request->input('email');
         $password= Hash::make($request->input('password'));

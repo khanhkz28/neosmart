@@ -15,7 +15,7 @@
             @endforeach
       </div>
     </div>
-  </section>
+  </section>      
   <section class="container mb150 my-10">
   <footer class="row featurette">
       <div class="col-md-7 col-sm-12">

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\PaginationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,8 @@ Route::get('/lien-he', function () {
 Route::get('/hoi-dap', function () {
     return view('client.faqs');
 });
+Route::get('/pagination', [PaginationController::class, 'index']);
+Route::get('/pagination/fetch_data', [PaginationController::class, 'fetch_data']);
 Route::group(['prefix' => 'congtrinh'], function ($router) {
     Route::get('/', [BlogController::class, 'GetAll']);
     Route::get('/{id}', [BlogController::class, 'getbyid']);

@@ -13,16 +13,16 @@
           <a class="nav-link" aria-current="page" href="#">Trang chủ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Công trình <i class="bi bi-chevron-down"></i></a>
+          <a class="nav-link" href="/congtrinh">Công trình <i class="bi bi-chevron-down"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>
+          <a class="nav-link" href="/sanpham">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Hỏi đáp</a>
+          <a class="nav-link" href="/faq">Hỏi đáp</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Liên hệ</a>
+          <a class="nav-link" href="lienhe">Liên hệ</a>
         </li>
       </ul>
       <div class="d-flex flex-column-reverse position-relative">
