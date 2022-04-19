@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Facades\JWTAuth;
+
 class AuthController extends Controller
 {
     /**
@@ -16,21 +17,23 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('auth:api', ['except' => ['login', 'register']]);
     }
     public function GetAll()
     {
-        $users= User::all();
-        return response()->json($users); 
+        $users = User::all();
+        return response()->json($users);
     }
     /**
      * Get a JWT via given credentials.
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function login(Request $request){
-    	$validator = Validator::make($request->all(), [
+    public function login(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
             'email' => 'required|email',
             'password' => 'required|string|min:6',
         ]);
@@ -38,7 +41,7 @@ class AuthController extends Controller
             return response()->json($validator->errors(), 422);
         }
 
-        if (! $token = auth()->attempt($validator->validated())) {
+        if (!$token = auth()->attempt($validator->validated())) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
@@ -50,6 +53,26 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function register(Request $request)
+    {
+
+        $this->validate(
+            $request,
+            [
+                'name' => 'required',
+                'email' => 'required|email',
+                'password' => 'required|confirmed'
+            ]
+        );
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $password = Hash::make($request->input('password'));
+        $user = User::create(['name' => $name, 'email' => $email, 'password' => $password]);
+=======
+=======
+>>>>>>> afa029c6c9d9236eec8c7be97ebed27f6cbd4769
     public function register(Request $request) {
         $validator = Validator::make($request->all(), [
             'name'=> 'required',
@@ -70,12 +93,12 @@ class AuthController extends Controller
         $email=$request->input('email');
         $password= Hash::make($request->input('password'));
         $user = User::create(['name'=>$name,'email'=>$email,'password'=>$password]);
+>>>>>>> afa029c6c9d9236eec8c7be97ebed27f6cbd4769
 
         return response()->json([
             'message' => 'User successfully registered',
-            'user' => $user 
+            'user' => $user
         ], 201);
-        
     }
 
 
@@ -84,7 +107,8 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function logout(Request $request) {
+    public function logout(Request $request)
+    {
         $this->validate($request, [
             'token' => 'required'
         ]);
@@ -109,7 +133,8 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function refresh() {
+    public function refresh()
+    {
         return $this->createNewToken(auth()->refresh());
     }
 
@@ -118,7 +143,8 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function userProfile() {
+    public function userProfile()
+    {
         return response()->json(auth()->user());
     }
 
@@ -129,7 +155,8 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    protected function createNewToken($token){
+    protected function createNewToken($token)
+    {
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
@@ -138,25 +165,25 @@ class AuthController extends Controller
         ]);
     }
 
-    public function changePassWord(Request $request) {
+    public function changePassWord(Request $request)
+    {
         $validator = Validator::make($request->all(), [
             'old_password' => 'required|string|min:6',
             'new_password' => 'required|string|confirmed|min:6',
         ]);
 
-        if($validator->fails()){
+        if ($validator->fails()) {
             return response()->json($validator->errors()->toJson(), 400);
         }
         $userId = auth()->user()->id;
 
         $user = User::where('id', $userId)->update(
-                    ['password' => bcrypt($request->new_password)]
-                );
+            ['password' => bcrypt($request->new_password)]
+        );
 
         return response()->json([
             'message' => 'User successfully changed password',
             'user' => $user,
         ], 201);
     }
-
 }

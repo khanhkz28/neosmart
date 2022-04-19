@@ -1,13 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light postion-relative py-5">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light postion-relative pt-5 pb-4 position-absolute w-100">
+  <div class="container-fluid nav-menu">
     <div class="brand-image d-flex flex-row flex-nowrap justify-content-between">
-      <a class="navbar-brand mx-5" href="#"><img src="./images/client/logo.png" alt="logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <a class="navbar-brand mx-5" href="{{route('home')}}"><img src="{{asset('/images/client/logo.png')}}"
+          alt="logo"></a>
+      <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
       </button>
     </div>
-    <div class="collapse navbar-collapse px-5" id="navbarTogglerDemo01">
+    <div class="collapse navbar-collapse px-5 d-block" id="navbarTogglerDemo01">
       <ul class="navbar-nav mb-2 mb-lg-0 fw-normal">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Trang chủ</a>

@@ -8,6 +8,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ListBlogController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ClientMessageController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,10 +35,10 @@ Route::group([
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/refresh', [AuthController::class, 'refresh']);
     Route::get('/user-profile', [AuthController::class, 'userProfile']);
-    Route::post('/change-pass', [AuthController::class, 'changePassWord']);    
+    Route::post('/change-pass', [AuthController::class, 'changePassWord']);
 });
 
-Route::group(['middleware' => 'api','prefix' => 'blog'], function ($router) {
+Route::group(['middleware' => 'api', 'prefix' => 'blog'], function ($router) {
     Route::get('index', [BlogController::class, 'index']);
     Route::post('store', [BlogController::class, 'store']);
     Route::post('update/{id}', [BlogController::class, 'update']);
@@ -44,7 +46,7 @@ Route::group(['middleware' => 'api','prefix' => 'blog'], function ($router) {
     Route::get('show/{id}', [BlogController::class, 'show']);
     Route::post('updateDisplay/{id}', [BlogController::class, 'updateDisplay']);
 });
-Route::group(['middleware' => 'api','prefix' => 'category'], function ($router) {
+Route::group(['middleware' => 'api', 'prefix' => 'category'], function ($router) {
     Route::get('index', [CategoryController::class, 'index']);
     Route::post('store', [CategoryController::class, 'store']);
     Route::post('update/{id}', [CategoryController::class, 'update']);
@@ -52,21 +54,23 @@ Route::group(['middleware' => 'api','prefix' => 'category'], function ($router) 
     Route::get('show/{id}', [CategoryController::class, 'show']);
 });
 
-Route::group(['middleware' => 'api','prefix' => 'listblog'], function ($router) {
+Route::group(['middleware' => 'api', 'prefix' => 'listblog'], function ($router) {
     Route::get('index', [ListBlogController::class, 'index']);
     Route::post('store', [ListBlogController::class, 'store']);
     Route::post('update/{id}', [ListBlogController::class, 'update']);
     Route::delete('delete/{id}', [ListBlogController::class, 'destroy']);
     Route::get('show/{id}', [ListBlogController::class, 'show']);
 });
-Route::group(['middleware' => 'api','prefix' => 'faq'], function ($router) {
+
+Route::group(['middleware' => 'api', 'prefix' => 'faq'], function ($router) {
     Route::get('index', [FaqController::class, 'index']);
     Route::post('store', [FaqController::class, 'store']);
     Route::post('update/{id}', [FaqController::class, 'update']);
     Route::delete('delete/{id}', [FaqController::class, 'destroy']);
     Route::get('show/{id}', [FaqController::class, 'show']);
 });
-Route::group(['middleware' => 'api','prefix' => 'product'], function ($router) {
+
+Route::group(['middleware' => 'api', 'prefix' => 'product'], function ($router) {
     Route::get('index', [ProductController::class, 'index']);
     Route::post('store', [ProductController::class, 'store']);
     Route::post('update/{id}', [ProductController::class, 'update']);
@@ -74,3 +78,5 @@ Route::group(['middleware' => 'api','prefix' => 'product'], function ($router) {
     Route::get('show/{id}', [ProductController::class, 'show']);
     Route::get('show/category/{id}', [ProductController::class, 'showbycategory']);
 });
+
+Route::apiResource('/client-message', ClientMessageController::class);
