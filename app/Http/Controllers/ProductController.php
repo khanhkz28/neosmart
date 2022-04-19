@@ -15,7 +15,16 @@ class ProductController extends Controller
     }
     public function GetAll()
     {
-        return view('admin.product.index', ['products' => Product::GetAll()]);
+        return view('client.products.index', ['products' => Product::GetAll()]);
+    }
+    public function GetById($id)
+    {
+        $row= Product::find($id);
+        if ($row == null) {
+            return redirect('sanpham')->with('success', 'Sản phẩm này không tồn tại!');
+        } else {
+            return view('client.products.detail', compact('row'));
+        }
     }
     public function store(Request $request)
     {
@@ -40,8 +49,6 @@ class ProductController extends Controller
                 $product->photo= $name;
             }
         }
-        
-        if(Category::find($request->input('category_id'))){
             $product->title = $request->input('title');        
             $product->price = $request->input('price');        
             $product->description = $request->input('description');      
@@ -49,18 +56,22 @@ class ProductController extends Controller
             $product->detail = $request->input('detail');        
             $product->position = $request->input('position');        
             $product->display = $request->input('display');      
-            $product->category_id = $request->input('category_id');     
-            $product->save();
-            return response()->json($product);
-        }
-        else{
+            $product->category_id = $request->input('category_id'); 
+            $data = Category::find($request->input('category_id'));   
+        if( $data == null){
             return response()->json(
                 [
                     'status'=> 404, 
                     'message' => 'Id category không hợp lệ', 
                 ]
             );
+           
         }
+        else{ 
+            $product->save();
+            return response()->json($product); 
+        }
+        
     }
     public function show($id)
     {
@@ -97,10 +108,10 @@ class ProductController extends Controller
         }    
 		
         $product->title = $request->input('title');        
-        $product->price = $request->input('price');        
-        $product->description = $request->input('description');  
-        $product->display = $request->input('display'); 	
-		$product->position = $request->input('position');		
+        $product->price = $request->input('price');
+        $product->description = $request->input('description');
+        $product->position = $request->input('position');        
+        $product->display = $request->input('display'); 
         $product->save();
         return response()->json($product); 
     }

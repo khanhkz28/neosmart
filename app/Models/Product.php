@@ -19,4 +19,7 @@ class Product extends Model
         'display', 
         'category_id',
     ];
+    function scopeGetAll(){
+        return $this->orderBy('id','asc')->paginate(10);
+    }
 }

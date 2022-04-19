@@ -5,18 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class Faq extends Model
 {
     use HasFactory;
-    protected $table='blog';
+    protected $table='faq';
     protected $fillable = [
         'title',
-        'description',
         'content',
-        'photo',
-        'position',
-        'display' ,
-        'listblog_id' 
+        'display'
     ];
     function scopeGetAll(){
         return $this->orderBy('id','asc')->paginate(10);
