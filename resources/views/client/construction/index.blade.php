@@ -4,9 +4,15 @@
 @section('breadcrumb-second', 'Công trình')
 @section('main')
 <main>
-  <section>
-    <img src="{{asset('images//bannerct.png')}}" alt="">
-  </section>
+  <div class="container-banner"> 
+  <div class="banner">
+    <img src="{{asset('images/client/bannerct.png')}}" alt="" class="banner-img">
+  </div>
+  <div class="content-banner">
+      <h2 class="heading-banner">Công trình đã thực hiện</h2>
+      <p class="des-banner">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+  </div>
+</div>
   <section class="container my-5 ">
   <div class="row row-cols-1 row-cols-md-3 g-4 section-ct-body">
   <div class="col-12">
