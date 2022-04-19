@@ -26,7 +26,12 @@ Route::get('/hoi-dap', function () {
     return view('client.faqs');
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+Route::get('/pagination', [PaginationController::class, 'index']);
+Route::get('/pagination/fetch_data', [PaginationController::class, 'fetch_data']);
+>>>>>>> afa029c6c9d9236eec8c7be97ebed27f6cbd4769
 =======
 Route::get('/pagination', [PaginationController::class, 'index']);
 Route::get('/pagination/fetch_data', [PaginationController::class, 'fetch_data']);
