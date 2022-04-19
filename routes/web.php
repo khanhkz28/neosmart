@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\PaginationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,15 +17,15 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('client.home');
-});
+Route::get('/', [ClientController::class, 'index']);
 Route::get('/lien-he', function () {
     return view('client.contant');
 });
 Route::get('/hoi-dap', function () {
     return view('client.faqs');
 });
+Route::get('/pagination', [PaginationController::class, 'index']);
+Route::get('/pagination/fetch_data', [PaginationController::class, 'fetch_data']);
 Route::group(['prefix' => 'congtrinh'], function ($router) {
     Route::get('/', [BlogController::class, 'GetAll']);
     Route::get('/{id}', [BlogController::class, 'getbyid']);

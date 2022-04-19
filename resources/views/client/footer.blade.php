@@ -1,3 +1,39 @@
+<section class="container faq  my-5">
+  <div class="row featurette">
+     
+      <div class="col-md-5 col-sm-12 featurette-img">
+        <div class="featurette-heading"><a>FAQs</a></div>
+        <img src="{{asset('images/client/Hfaq.png')}}" alt="">
+
+      </div>
+      <div class="col-md-7 col-sm-12">
+      @foreach($data["faq"] as $faqs )
+                    <div class="featurette-news">
+                        <h3>{{$faqs->title}}</h3>
+                        <p>{{$faqs->content}}</p>
+                    </div>          
+            @endforeach
+      </div>
+    </div>
+  </section>      
+  <section class="container  my-5">
+  <footer class="row featurette">
+      <div class="col-md-7 col-sm-12">
+        <div class="featurette-heading"><a>Tin tức</a></div>
+          
+            @foreach($data["blogs"] as $blog )
+                    <div class="featurette-news">
+                        <h3>{{$blog->title}}</h3>
+                        <p>{{$blog->description}}</p>
+                    </div>          
+            @endforeach
+      </div>
+      <div class="col-md-5 featurette-img col-sm-12">
+        <img src="{{asset('images/client/Hnews.png')}}" alt="">
+
+      </div>
+    </div>
+  </section>
 <div class="footer">
     <div class="container">
     <div class="row ">
@@ -28,4 +64,4 @@
     </div>
     <h2 class="mt-5">2022 © NeoSmart. All rights reserved.</h2>
     </div>
-</div>
+</footer>

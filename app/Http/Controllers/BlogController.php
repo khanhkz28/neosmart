@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\ListBlog;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -16,6 +17,7 @@ class BlogController extends Controller
     public function GetAll()
     {
         return view('client.construction.index', ['Blogs' => Blog::GetAll()]);
+     
     }
     public function GetById($id)
     {
@@ -26,7 +28,14 @@ class BlogController extends Controller
             return view('client.construction.detail', compact('row'));
         }
     }
-    
+    public function GetByListBlog()
+    {
+
+           $row = Blog::where('listblog_id',$id)->get();
+          return  view('client.construction.index', compact('row'));
+
+
+    }
     public function store(Request $request)
     {
         $this->validate($request,[
