@@ -4,7 +4,7 @@
 @section('breadcrumb-second', 'Công trình')
 @section('main')
 <main>
-  <div class="container-banner"> 
+  <div class="container-banner "> 
   <div class="banner">
     <img src="{{asset('images/client/bannerct.png')}}" alt="" class="banner-img">
   </div>
