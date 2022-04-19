@@ -28,7 +28,7 @@
         <p class="card-ct-text">{!!$row->description!!}</p>
       </div>
 
-        <a class="card-ct-footer" href="congtrinh/detail/{{$row->id}}">
+        <a class="card-ct-footer" href="congtrinh/{{$row->id}}">
           <div class="card-ct-footer-text">Xem chi tiết&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-right"></i></div>
         </a>
     </div>
