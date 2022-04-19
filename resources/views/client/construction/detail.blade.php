@@ -4,6 +4,8 @@
 @section('breadcrumb-second', 'Công trình chi tiết')
 @section('main')
 <main>
-            Công trình detail
+{{ $row->title }}
+{{ $row->description }}
+{{ $row->content }}
   </main>
 @endsection

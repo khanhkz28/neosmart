@@ -19,6 +19,11 @@ class Blog extends Model
         'listblog_id' 
     ];
     function scopeGetAll(){
-        return $this->orderBy('id','asc')->paginate(10);
+        return $this->orderBy('id','asc')->paginate(3);
+    }
+    function ListBlog(){
+        return $this->belongsTo(
+            ListBlog::class,'listblog_id'
+        );
     }
 }

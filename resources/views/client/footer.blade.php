@@ -1,4 +1,4 @@
-<section class="container faq mb150 my-10">
+<section class="container faq  my-5">
   <div class="row featurette">
      
       <div class="col-md-5 col-sm-12 featurette-img">
@@ -15,16 +15,16 @@
             @endforeach
       </div>
     </div>
-  </section>
-  <section class="container mb150 my-10">
+  </section>      
+  <section class="container  my-5">
   <footer class="row featurette">
       <div class="col-md-7 col-sm-12">
         <div class="featurette-heading"><a>Tin tức</a></div>
           
-            @foreach($data["faq"] as $faqs )
+            @foreach($data["blogs"] as $blog )
                     <div class="featurette-news">
-                        <h3>{{$faqs->title}}</h3>
-                        <p>{{$faqs->content}}</p>
+                        <h3>{{$blog->title}}</h3>
+                        <p>{{$blog->description}}</p>
                     </div>          
             @endforeach
       </div>
