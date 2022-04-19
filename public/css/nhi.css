@@ -13,7 +13,6 @@
 }
 .banner {
     width: 100%;
-    height: 100%;
     position: relative;
 }
 .banner-img {
@@ -25,21 +24,27 @@
 .content-banner {
     position: absolute;
     width: 50%;
-    top: 35%;
-    left: 10%;
+    height: auto;
+    top: 30% !important;
+    left: 10% !important;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+@media (max-width: 430px) {
+    .content-banner {
+        top: 10% !important;
+        left: 14% !important;
+    }
 }
 @media (max-width: 576px) {
     .banner {
         width: 100%;
     }
     .content-banner {
-        height: 100%;
         width: 80%;
-        top: 15%;
-        left: 10%;
+        top: 17% !important;
+        left: 14% !important;
         gap: 1rem;
     }
     .banner-img {
@@ -71,4 +76,9 @@
     letter-spacing: 0.8px;
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.858);
+}
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1400px) {
 }

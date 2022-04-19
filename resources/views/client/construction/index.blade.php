@@ -25,7 +25,7 @@
       <img src="{{ asset('images')}}/{{{$row->photo}}}" class="card-img-top shadow " alt="{{$row->title}}">
       <div class="card-body">
         <h2 class="card-ct-title">{{$row->title}}</h2>
-        <p class="card-ct-text">{{$row->description}}</p>
+        <p class="card-ct-text">{!!$row->description!!}</p>
       </div>
 
         <a class="card-ct-footer" href="congtrinh/detail/{{$row->id}}">
