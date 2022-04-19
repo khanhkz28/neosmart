@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Blog;
 use Illuminate\Support\ServiceProvider;
 
 use App\Models\Faq;
@@ -25,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        return View::share("data", ["faq" => Faq::GetAll()]);
+        return View::share("data", ["faq" => Faq::GetAll(),"blogs" => Blog::GetAll()]);
+
     }
 }
