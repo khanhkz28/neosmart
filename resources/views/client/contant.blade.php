@@ -14,46 +14,46 @@
         doloribus officiis.</p>
     </div>
   </div>
-  <div class="container">
-    <div class="d-flex m-5 justify-content-center pt-5">
-      <div class="detail-contact col-lg-4 col-sm-12 col-md-12 d-flex flex-column p-4 mt-4">
-        <img class="w-100" src="./images/client/imgContact.png" atl="image contact">
+  <div class="container-fuild row justify-content-center pt-5 px-4 mx-0">
+    <div class="detail-contact col-lg-5 col-sm-12 col-md-12 d-flex flex-column p-4 mt-4">
+      <img class="w-100" src="./images/client/imgContact.png" atl="image contact">
 
-        <h2 class="dt-title my-4 fw-400">ADDRESS</h2>
-        <p class="text-dt fw-400 fst-italic">12 Hoa Sứ, P.12, Q. Phú Nhuận, TP.HCM, Việt Nam</p>
+      <h2 class="dt-title my-4 fw-400">ADDRESS</h2>
+      <p class="text-dt fw-400 fst-italic">12 Hoa Sứ, P.12, Q. Phú Nhuận, TP.HCM, Việt Nam</p>
 
-        <h2 class="dt-title my-4 fw-400">PHONE</h2>
-        <p class="text-dt fw-400">
-          <i class="bi bi-telephone-fill"></i> +84 1900 6868 <br>
-          <i class="bi bi-telephone-fill"></i> +84 909 09 09 90</p>
+      <h2 class="dt-title my-4 fw-400">PHONE</h2>
+      <p class="text-dt fw-400">
+        <i class="bi bi-telephone-fill"></i> +84 1900 6868 <br>
+        <i class="bi bi-telephone-fill"></i> +84 909 09 09 90
+      </p>
 
-        <h2 class="dt-title my-4 fw-400">ONLINE SERVICE</h2>
-        <p class="text-dt fw-400">
-          <i class="bi bi-globe"></i> www.neosmart.vn <br>
-          <i class="bi bi-envelope-fill"></i> info@neosmart.vn</p>
-      </div>
-      <div class="form-contact col-lg-6 col-sm-12 col-md-12 d-flex flex-column p-5 bg-white mt-4">
-        <h2 class="title-form fw-400 lh-30 w-100 text-left">SEND US MESSAGE</h2>
-        <form action="#" method="post" class="my-5 ">
-          <div class="form-group mb-3">
-            <label for="" class="lh-30">Full Name</label>
-            <input class="form-control p-2 lh-30" type="text" name="fullname" placeholder="Your Name" />
-          </div>
-          <div class="form-group my-4">
-            <label for="" class="lh-30">Email</label>
-            <input class="form-control p-2 lh-30" type="text" name="email" placeholder="Your Email" />
-          </div>
-          <div class="form-group my-4">
-            <label for="" class="lh-30">Phone Number</label>
-            <input class="form-control p-2 lh-30" type="text" name="phone_number" placeholder="Your phone number" />
-          </div>
-          <div class="form-group my-4">
-            <label for="txt-message" class="form-label">Message</label>
-            <textarea class="form-control p-4 lh-30" id="txt-message" rows="7" placeholder="Your Message"></textarea>
-          </div>
-          <button class="btn btn-submit w-100 text-white p-3 text-center mt-4" name="btn_submit">SUBMIT</button>
-        </form>
-      </div>
+      <h2 class="dt-title my-5 fw-400">ONLINE SERVICE</h2>
+      <p class="text-dt fw-400">
+        <i class="bi bi-globe"></i> www.neosmart.vn <br>
+        <i class="bi bi-envelope-fill"></i> info@neosmart.vn
+      </p>
+    </div>
+    <div class="form-contact col-lg-5 col-sm-12 col-md-12 d-flex flex-column p-5 bg-white mt-4">
+      <h2 class="title-form fw-400 lh-30 w-100 text-left">SEND US MESSAGE</h2>
+      <form action="#" method="post" class="my-5 ">
+        <div class="form-group mb-3">
+          <label for="" class="lh-30">Full Name</label>
+          <input class="form-control p-2 lh-30" type="text" name="fullname" placeholder="Your Name" />
+        </div>
+        <div class="form-group my-4">
+          <label for="" class="lh-30">Email</label>
+          <input class="form-control p-2 lh-30" type="text" name="email" placeholder="Your Email" />
+        </div>
+        <div class="form-group my-4">
+          <label for="" class="lh-30">Phone Number</label>
+          <input class="form-control p-2 lh-30" type="text" name="phone_number" placeholder="Your phone number" />
+        </div>
+        <div class="form-group my-4">
+          <label for="txt-message" class="form-label">Message</label>
+          <textarea class="form-control p-4 lh-30" id="txt-message" rows="7" placeholder="Your Message"></textarea>
+        </div>
+        <button class="btn btn-submit w-100 text-white p-3 text-center mt-4" name="btn_submit">SUBMIT</button>
+      </form>
     </div>
     <div class="col-12 text-center">
       <iframe class="map-embed m-4"

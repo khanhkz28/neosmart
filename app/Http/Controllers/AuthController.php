@@ -53,8 +53,7 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     public function register(Request $request)
     {
 
@@ -70,9 +69,7 @@ class AuthController extends Controller
         $email = $request->input('email');
         $password = Hash::make($request->input('password'));
         $user = User::create(['name' => $name, 'email' => $email, 'password' => $password]);
-=======
-=======
->>>>>>> afa029c6c9d9236eec8c7be97ebed27f6cbd4769
+
     public function register(Request $request) {
         $validator = Validator::make($request->all(), [
             'name'=> 'required',
@@ -93,7 +90,6 @@ class AuthController extends Controller
         $email=$request->input('email');
         $password= Hash::make($request->input('password'));
         $user = User::create(['name'=>$name,'email'=>$email,'password'=>$password]);
->>>>>>> afa029c6c9d9236eec8c7be97ebed27f6cbd4769
 
         return response()->json([
             'message' => 'User successfully registered',
